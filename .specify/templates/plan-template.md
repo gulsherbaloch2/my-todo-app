@@ -17,15 +17,15 @@
   the iteration process.
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: TypeScript 5.x, Python 3.9+
+**Primary Dependencies**: Next.js 16+ (App Router), FastAPI, SQLModel, Neon PostgreSQL, Better Auth
+**Storage**: Neon PostgreSQL database with SQLModel ORM
+**Testing**: Jest/React Testing Library for frontend, pytest for backend
+**Target Platform**: Web application (responsive, cross-browser)
+**Project Type**: Full-stack web application with separate frontend/backend
+**Performance Goals**: Page load times under 3 seconds on 3G, API response times under 500ms
+**Constraints**: WCAG 2.1 AA accessibility compliance, responsive design, JWT authentication
+**Scale/Scope**: Individual user focus with potential for scaling to 10k+ users
 
 ## Constitution Check
 

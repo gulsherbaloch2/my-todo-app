@@ -23,7 +23,7 @@ description: "Task list template for feature implementation"
 - **Single project**: `src/`, `tests/` at repository root
 - **Web app**: `backend/src/`, `frontend/src/`
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
-- Paths shown below assume single project - adjust based on plan.md structure
+- Paths shown below assume web app structure - adjust based on plan.md structure
 
 <!-- 
   ============================================================================
@@ -48,9 +48,10 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T001 Create project structure per implementation plan with backend/frontend separation
+- [ ] T002 Initialize Next.js 16+ project with TypeScript and Tailwind CSS
+- [ ] T003 [P] Initialize FastAPI backend with SQLModel and Neon PostgreSQL dependencies
+- [ ] T004 [P] Configure linting and formatting tools for both frontend (ESLint, Prettier) and backend (flake8, black)
 
 ---
 
@@ -62,12 +63,13 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T005 Setup database schema and migrations framework with Neon PostgreSQL
+- [ ] T006 [P] Implement authentication/authorization framework using Better Auth with JWT
+- [ ] T007 [P] Setup API routing and middleware structure in FastAPI
+- [ ] T008 Create base models/entities that all stories depend on using SQLModel
+- [ ] T009 Configure error handling and logging infrastructure for both frontend and backend
+- [ ] T010 Setup environment configuration management with proper security for JWT handling
+- [ ] T011 [P] Create shared TypeScript types for API contracts between frontend and backend
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -88,12 +90,13 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T013 [P] [US1] Create [Entity1] model in backend/src/models/[entity1].py using SQLModel
+- [ ] T014 [P] [US1] Create [Entity2] model in backend/src/models/[entity2].py using SQLModel
+- [ ] T015 [US1] Implement [Service] in backend/src/services/[service].py (depends on T013, T014)
+- [ ] T016 [US1] Implement [API endpoint] in backend/src/api/[endpoint].py with proper authentication
+- [ ] T017 [US1] Create corresponding frontend component in frontend/src/components/[component].tsx using TypeScript and Tailwind CSS
+- [ ] T018 [US1] Add validation using Pydantic models and TypeScript types
+- [ ] T019 [US1] Add proper error handling and logging for both frontend and backend
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -150,11 +153,13 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
-- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
+- [ ] TXXX [P] Documentation updates in docs/ including API documentation
+- [ ] TXXX Code cleanup and refactoring following TypeScript and Python best practices
+- [ ] TXXX Performance optimization across all stories (bundle size, API response times)
+- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/ for both frontend and backend
+- [ ] TXXX Security hardening including JWT token security and database query validation
+- [ ] TXXX Accessibility improvements to meet WCAG 2.1 AA standards
+- [ ] TXXX Responsive design validation across different screen sizes
 - [ ] TXXX Run quickstart.md validation
 
 ---

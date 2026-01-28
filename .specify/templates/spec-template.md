@@ -84,11 +84,11 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: System MUST implement authentication using Better Auth with JWT
+- **FR-002**: System MUST validate all user inputs using TypeScript types and Pydantic models
+- **FR-003**: Users MUST be able to perform CRUD operations on their tasks
+- **FR-004**: System MUST store user data securely in Neon PostgreSQL using SQLModel
+- **FR-005**: System MUST provide responsive UI using Tailwind CSS that works across devices
 
 *Example of marking unclear requirements:*
 

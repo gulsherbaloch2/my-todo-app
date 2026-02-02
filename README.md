@@ -1,3 +1,13 @@
+---
+title: p2-backend-fastapi
+emoji: 🚀
+colorFrom: blue
+colorTo: purple
+sdk: python
+python_version: "3.12"
+app_file: main.py
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

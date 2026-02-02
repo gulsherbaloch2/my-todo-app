@@ -4,8 +4,10 @@ emoji: 🚀
 colorFrom: blue
 colorTo: purple
 sdk: python
+sdk_version: "3.12"
 python_version: "3.12"
-app_file: main.py
+app_file: app.py
+pinned: false
 ---
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).

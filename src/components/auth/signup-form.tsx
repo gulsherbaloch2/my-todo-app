@@ -62,6 +62,11 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSignup, loading = false, erro
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSubmit(e as any);
+              }
+            }}
             placeholder="Enter your full name"
             required
             className="w-full"
@@ -77,6 +82,11 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSignup, loading = false, erro
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSubmit(e as any);
+              }
+            }}
             placeholder="Enter your email"
             required
             className="w-full"
@@ -92,6 +102,11 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSignup, loading = false, erro
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSubmit(e as any);
+              }
+            }}
             placeholder="Enter your password"
             required
             className="w-full"

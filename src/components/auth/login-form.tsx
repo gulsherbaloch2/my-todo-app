@@ -61,6 +61,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false, error }
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSubmit(e as any);
+              }
+            }}
             placeholder="Enter your email"
             required
             className="w-full"
@@ -76,6 +81,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false, error }
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSubmit(e as any);
+              }
+            }}
             placeholder="Enter your password"
             required
             className="w-full"

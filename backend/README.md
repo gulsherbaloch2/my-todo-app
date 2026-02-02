@@ -1,3 +1,14 @@
+---
+title: p2-backend-fastapi
+emoji: 🚀
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_file: main.py
+pinned: false
+---
+
+
 # Todo Application Backend
 
 This is the backend implementation for the Todo Application, built with Python FastAPI, SQLModel, and Neon PostgreSQL.

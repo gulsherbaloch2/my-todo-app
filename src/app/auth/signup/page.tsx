@@ -15,9 +15,12 @@ const SignupPage: React.FC = () => {
   const handleSignup = async (email: string, password: string, name: string) => {
     try {
       await signup(email, password, name);
+
+      // Small delay to ensure session is properly established
+      await new Promise(resolve => setTimeout(resolve, 500));
+
       // Redirect to dashboard after successful signup
       router.push('/dashboard');
-      router.refresh(); // Refresh to update the UI after signup
     } catch (error) {
       console.error('Signup failed:', error);
       // Error is handled in the SignupForm component

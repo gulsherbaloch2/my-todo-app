@@ -44,8 +44,6 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel }) => {
       title,
       description,
       completed: task?.completed || false,
-      createdAt: task?.createdAt || new Date(),
-      updatedAt: new Date(),
     });
     
     setIsSubmitting(false);

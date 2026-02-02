@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const handleRedirect = async () => {
       // Small delay to ensure auth state is properly loaded
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, 300));
 
       if (isAuthenticated) {
         // If user is authenticated, redirect to dashboard

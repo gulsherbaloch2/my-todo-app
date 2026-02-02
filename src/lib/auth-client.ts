@@ -9,4 +9,6 @@ export const authClient = createAuthClient({
       'API-Key': process.env.KRO_API_KEY || '', // Include KRO API key in auth requests
     },
   },
+  // Ensure session is handled properly in production
+  plugins: [],
 });

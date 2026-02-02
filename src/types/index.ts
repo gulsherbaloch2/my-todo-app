@@ -23,7 +23,7 @@ export interface BetterAuthUser {
   email: string;
   name?: string;
   emailVerified: boolean;
-  image?: string;
+  image?: string | null;
   createdAt: Date;
   updatedAt: Date;
 }

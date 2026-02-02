@@ -15,9 +15,12 @@ const LoginPage: React.FC = () => {
   const handleLogin = async (email: string, password: string) => {
     try {
       await login(email, password);
+
+      // Small delay to ensure session is properly established
+      await new Promise(resolve => setTimeout(resolve, 500));
+
       // Redirect to dashboard after successful login
       router.push('/dashboard');
-      router.refresh(); // Refresh to update the UI after login
     } catch (error) {
       console.error('Login failed:', error);
       // Error is handled in the LoginForm component

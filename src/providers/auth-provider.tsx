@@ -29,8 +29,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const checkAuthStatus = async () => {
       try {
         const session = await authClient.getSession();
-        if (session?.user) {
-          setUser(session.user);
+        if (session?.data?.user) {
+          setUser(session.data.user);
         }
       } catch (error) {
         console.error('Failed to get session:', error);
@@ -49,11 +49,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const response = await authClient.signIn.email({
         email,
         password,
-        callbackURL: '/dashboard', // Redirect after login
+        // Remove callbackURL to handle redirect separately
       });
 
-      if (response?.user) {
-        setUser(response.user);
+      if (response?.data?.user) {
+        setUser(response.data.user);
       }
     } catch (error) {
       console.error('Login failed:', error);
@@ -70,11 +70,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         email,
         password,
         name,
-        callbackURL: '/dashboard', // Redirect after signup
+        // Remove callbackURL to handle redirect separately
       });
 
-      if (response?.user) {
-        setUser(response.user);
+      if (response?.data?.user) {
+        setUser(response.data.user);
       }
     } catch (error) {
       console.error('Signup failed:', error);
